@@ -26,7 +26,8 @@
                     required>
                 <br>
                 <label class="labels" for="photo">Add a Link to a Picture of Yourself</label>
-                <input type="link" id="photo" class="form-control" aria-descibedby="photo" placeholder="https://www.selfie.com/me" required>
+                <input type="link" id="photo" class="form-control" aria-descibedby="photo"
+                    placeholder="https://www.selfie.com/me" required>
             </div>
 
             <hr>
@@ -91,7 +92,7 @@
 
 
             <h3><strong>Question 6</strong></h3>
-            <h4>It is often difficult for you to relate to other people’s feelings.</h4>
+            <h4>I would be just fine going to see a movie all alone if it was something I wanted to see.</h4>
             <select id="6" class="input">
                 <option value="">Select One</option>
                 <option value="1">Strongly Disagree</option>
@@ -103,7 +104,7 @@
 
 
             <h3><strong>Question 7</strong></h3>
-            <h4>In a discussion, truth should be more important than people’s sensitivities.</h4>
+            <h4>I'm the first to get up and dance.</h4>
             <select id="7" class="input">
                 <option value="">Select One</option>
                 <option value="1">Strongly Disagree</option>
@@ -114,7 +115,7 @@
             </select>
 
             <h3><strong>Question 8</strong></h3>
-            <h4>You rarely get carried away by fantasies and ideas.</h4>
+            <h4>I like to go out and just people watch.</h4>
             <select id="8" class="input">
                 <option value="">Select One</option>
                 <option value="1">Strongly Disagree</option>
@@ -125,8 +126,7 @@
             </select>
 
             <h3><strong>Question 9</strong></h3>
-            <h4>You think that everyone’s views should be respected regardless of whether they are supported by facts or
-                not.</h4>
+            <h4>I like to get out and be active. (ski, bike, hike, swim, etc...)</h4>
             <select id="9" class="input">
                 <option value="">Select One</option>
                 <option value="1">Strongly Disagree</option>
@@ -153,11 +153,8 @@
         </div>
     </div>
 
-    <!-- Modal -->
-    <div id="results-modal" class="modal fade" role="dialog">
+    <!-- <div id="results-modal" class="modal fade" role="dialog">
         <div class="modal-dialog">
-
-            <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -174,7 +171,18 @@
             </div>
 
         </div>
+    </div> -->
+
+    <div id="myModal" class="modal">
+        <div class="card modal-content">
+            <div class="card-header"></div>
+            <span class='close'>&times;</span>
+            <h1 id='cardTitle'>Your Best Match</h1>
+            <hr>
+            <div class="card-body"></div>
+        </div>
     </div>
+
 
     <script type="text/javascript">
 
@@ -212,14 +220,26 @@
                 };
 
                 $.post("/api/friends", newFriend, function (data) {
-                    $("#match-name").text(data.name);
-                    $("#match-img").attr("src", data.photo);
-                    $("#results-modal").modal("toggle");
+                    // $("#match-name").text(data.name);
+                    // $("#match-img").attr("src", data.photo);
+                    // $("#results-modal").modal("toggle");
+                    $("#myModal").css("display", "block");
+                    $(".card-body").html("<h2 class='card-text'>" + data.name + "</h2>");
+                    $(".card-body").append("<img id='image' src='" + data.photo + "'>");
                 });
             } else {
                 alert("Must fill all fields before submitting.");
             }
         });
+        $(document).on('click', '.close', function () {
+            $("#myModal").css("display", "none");
+        });
+        var modal = document.getElementById('myModal');
+        document.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
     </script>
 </body>
 
