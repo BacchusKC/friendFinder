@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Friend Finder</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1 id="headerText">Friend Finder</h1>
+    </header>
+    <div id="main" class="container">
+        <div id="box" class="jumbotron">
+            <h1><strong>About You</strong></h1>
+            <hr>
+            <div id="inputField">
+                <label class="labels" for="name">Name</label>
+                <input type="fullName" class="form-control" id="name" aria-describedby="name" placeholder="John Doe"
+                    required>
+                <br>
+                <label class="labels" for="photo">Add a Link to a Picture of Yourself</label>
+                <input type="link" id="photo" class="form-control" aria-descibedby="photo" placeholder="https://www.selfie.com/me" required>
+            </div>
+
+            <hr>
+
+            <h3><strong>Question 1</strong></h3>
+            <h4>I love to travel and see new places.</h4>
+            <select id="1" class="input">
+                <option value="">Select One</option>
+                <option value="1">Strongly Disagree</option>
+                <option value="2">Slightly Disagree</option>
+                <option value="3">Neutral</option>
+                <option value="4">Slightly Agree</option>
+                <option value="5">Strongly Agree</option>
+            </select>
+
+            <h3><strong>Question 2</strong></h3>
+            <h4>I often find myself daydreaming about grand adventures.</h4>
+            <select id="2" class="input">
+                <option value="">Select One</option>
+                <option value="1">Strongly Disagree</option>
+                <option value="2">Slightly Disagree</option>
+                <option value="3">Neutral</option>
+                <option value="4">Slightly Agree</option>
+                <option value="5">Strongly Agree</option>
+            </select>
+
+
+            <h3><strong>Question 3</strong></h3>
+            <h4>I much prefer dogs over cats.</h4>
+            <select id="3" class="input">
+                <option value="">Select One</option>
+                <option value="1">Strongly Disagree</option>
+                <option value="2">Slightly Disagree</option>
+                <option value="3">Neutral</option>
+                <option value="4">Slightly Agree</option>
+                <option value="5">Strongly Agree</option>
+            </select>
+
+
+            <h3><strong>Question 4</strong></h3>
+            <h4>If I was cliff diving with some friends, I would be the first to jump.</h4>
+            <select id="4" class="input">
+                <option value="">Select One</option>
+                <option value="1">Strongly Disagree</option>
+                <option value="2">Slightly Disagree</option>
+                <option value="3">Neutral</option>
+                <option value="4">Slightly Agree</option>
+                <option value="5">Strongly Agree</option>
+            </select>
+
+
+            <h3><strong>Question 5</strong></h3>
+            <h4>I really enjoy playing video games.</h4>
+            <select id="5" class="input">
+                <option value="">Select One</option>
+                <option value="1">Strongly Disagree</option>
+                <option value="2">Slightly Disagree</option>
+                <option value="3">Neutral</option>
+                <option value="4">Slightly Agree</option>
+                <option value="5">Strongly Agree</option>
+            </select>
+
+
+            <h3><strong>Question 6</strong></h3>
+            <h4>It is often difficult for you to relate to other people’s feelings.</h4>
+            <select id="6" class="input">
+                <option value="">Select One</option>
+                <option value="1">Strongly Disagree</option>
+                <option value="2">Slightly Disagree</option>
+                <option value="3">Neutral</option>
+                <option value="4">Slightly Agree</option>
+                <option value="5">Strongly Agree</option>
+            </select>
+
+
+            <h3><strong>Question 7</strong></h3>
+            <h4>In a discussion, truth should be more important than people’s sensitivities.</h4>
+            <select id="7" class="input">
+                <option value="">Select One</option>
+                <option value="1">Strongly Disagree</option>
+                <option value="2">Slightly Disagree</option>
+                <option value="3">Neutral</option>
+                <option value="4">Slightly Agree</option>
+                <option value="5">Strongly Agree</option>
+            </select>
+
+            <h3><strong>Question 8</strong></h3>
+            <h4>You rarely get carried away by fantasies and ideas.</h4>
+            <select id="8" class="input">
+                <option value="">Select One</option>
+                <option value="1">Strongly Disagree</option>
+                <option value="2">Slightly Disagree</option>
+                <option value="3">Neutral</option>
+                <option value="4">Slightly Agree</option>
+                <option value="5">Strongly Agree</option>
+            </select>
+
+            <h3><strong>Question 9</strong></h3>
+            <h4>You think that everyone’s views should be respected regardless of whether they are supported by facts or
+                not.</h4>
+            <select id="9" class="input">
+                <option value="">Select One</option>
+                <option value="1">Strongly Disagree</option>
+                <option value="2">Slightly Disagree</option>
+                <option value="3">Neutral</option>
+                <option value="4">Slightly Agree</option>
+                <option value="5">Strongly Agree</option>
+            </select>
+
+            <h3><strong>Question 10</strong></h3>
+            <h4>You feel more energetic after spending time with a group of people.</h4>
+            <select id="10" class="input">
+                <option value="">Select One</option>
+                <option value="1">Strongly Disagree</option>
+                <option value="2">Slightly Disagree</option>
+                <option value="3">Neutral</option>
+                <option value="4">Slightly Agree</option>
+                <option value="5">Strongly Agree</option>
+            </select>
+            <hr>
+
+            <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">Find Match</button>
+            <br>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="results-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h2 class="modal-title"><strong>Best Match</strong></h2>
+                </div>
+                <div class="modal-body">
+                    <h2 id="match-name"></h2>
+                    <img id="match-img" style="max-width: 500px; width: 80%"
+                        src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script type="text/javascript">
+
+        $("#submit").on("click", function (event) {
+            event.preventDefault();
+
+            let test = [{ name: "Travis", scores: ["2", "3", "5"] }];
+            console.log(test[0].scores[0]);
+            function filled() {
+                var full = true;
+                $(".input").each(function () {
+                    if ($(this).val() === "") {
+                        full = false;
+                    }
+                });
+                return full;
+            }
+
+            if (filled()) {
+                var newFriend = {
+                    name: $("#name").val(),
+                    photo: $("#photo").val(),
+                    responses: [
+                        $("#1").val(),
+                        $("#2").val(),
+                        $("#3").val(),
+                        $("#4").val(),
+                        $("#5").val(),
+                        $("#6").val(),
+                        $("#7").val(),
+                        $("#8").val(),
+                        $("#9").val(),
+                        $("#10").val()
+                    ]
+                };
+
+                $.post("/api/friends", newFriend, function (data) {
+                    $("#match-name").text(data.name);
+                    $("#match-img").attr("src", data.photo);
+                    $("#results-modal").modal("toggle");
+                });
+            } else {
+                alert("Must fill all fields before submitting.");
+            }
+        });
+    </script>
+</body>
+
+</html>

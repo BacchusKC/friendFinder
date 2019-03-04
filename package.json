@@ -1,0 +1,23 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "Find Friends",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BacchusKC/friendFinder.git"
+  },
+  "author": "Travis Morris",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BacchusKC/friendFinder/issues"
+  },
+  "homepage": "https://github.com/BacchusKC/friendFinder#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "path": "^0.12.7"
+  }
+}

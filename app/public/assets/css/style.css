@@ -1,0 +1,46 @@
+body {
+    background-color: burlywood;
+}
+#box {
+    border: 2px solid black;
+}
+.btn {
+    background-color: dodgerblue;
+    border: 1px solid black;
+}
+h1 {
+    text-align: center;
+}
+header {
+    width: 100%;
+    text-align: center;
+    background-color: dodgerblue;
+    background-image: url("../images/people.png");
+    background-position: center;
+    background-repeat: repeat-x;
+    background-size: 320px;
+    color: aliceblue;
+    margin: 0;
+    height: 100px;
+    border-bottom: 2px solid black;
+}
+#headerText {
+    margin:0;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    font-size: 80px;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+.labels {
+    font-size: 20px;
+}
+#main {
+    margin: 60px auto;
+    max-width: 650px;
+}
