@@ -153,26 +153,6 @@
         </div>
     </div>
 
-    <!-- <div id="results-modal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h2 class="modal-title"><strong>Best Match</strong></h2>
-                </div>
-                <div class="modal-body">
-                    <h2 id="match-name"></h2>
-                    <img id="match-img" style="max-width: 500px; width: 80%"
-                        src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-
-        </div>
-    </div> -->
-
     <div id="myModal" class="modal">
         <div class="card modal-content">
             <div class="card-header"></div>
@@ -183,23 +163,18 @@
         </div>
     </div>
 
-
     <script type="text/javascript">
-
         $("#submit").on("click", function (event) {
             event.preventDefault();
-
-            let test = [{ name: "Travis", scores: ["2", "3", "5"] }];
-            console.log(test[0].scores[0]);
             function filled() {
                 var full = true;
                 $(".input").each(function () {
                     if ($(this).val() === "") {
                         full = false;
-                    }
+                    };
                 });
                 return full;
-            }
+            };
 
             if (filled()) {
                 var newFriend = {
@@ -220,16 +195,13 @@
                 };
 
                 $.post("/api/friends", newFriend, function (data) {
-                    // $("#match-name").text(data.name);
-                    // $("#match-img").attr("src", data.photo);
-                    // $("#results-modal").modal("toggle");
                     $("#myModal").css("display", "block");
                     $(".card-body").html("<h2 class='card-text'>" + data.name + "</h2>");
                     $(".card-body").append("<img id='image' src='" + data.photo + "'>");
                 });
             } else {
                 alert("Must fill all fields before submitting.");
-            }
+            };
         });
         $(document).on('click', '.close', function () {
             $("#myModal").css("display", "none");
@@ -238,8 +210,8 @@
         document.onclick = function (event) {
             if (event.target == modal) {
                 modal.style.display = "none";
-            }
-        }
+            };
+        };
     </script>
 </body>
 

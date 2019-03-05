@@ -33,9 +33,9 @@ header {
     text-align: center;
     background-color: dodgerblue;
     background-image: url("../images/people.png");
-    background-position: center;
+    background-position: bottom;
     background-repeat: repeat-x;
-    background-size: 320px;
+    background-size: contain;
     color: aliceblue;
     margin: 0;
     height: 100px;
@@ -86,4 +86,9 @@ header {
     border: 2px solid black;
     width: 90%;
     max-width: 554px;
+}
+@media only screen and (max-width: 475px) {
+    header {
+        height: 190px;
+    }
 }
